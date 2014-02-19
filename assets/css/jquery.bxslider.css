@@ -86,26 +86,32 @@ ul#slider2 li { height: 350px; }
 	background: #000;
 }
 
-/* DIRECTION CONTROLS (NEXT / PREV) */
-
+/* DIRECTION CONTROLS (NEXT / PREV)
+.bx-wrapper .bx-prev, .bx-wrapper .bx-next {
+    transition: all .1s ease;
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+} */
 .bx-wrapper .bx-prev {
 	left: -60px;
 	background: url(../img/arrows.png) no-repeat 0 0px;
-	width: 10px;
+	width: 19px;
 }
 
 .bx-wrapper .bx-next {
 	right: -60px;
-	background: url(../img/arrows.png) no-repeat -10px 0px;
-	width: 11px;
+	background: url(../img/arrows.png) no-repeat -19px 0px;
+	width: 10px;
 }
 
 .bx-wrapper .bx-prev:hover {
-	background-position: 0 -19px;
+	background-position: 0 -35px;
 }
 
 .bx-wrapper .bx-next:hover {
-	background-position: -10px -19px;
+	background-position: -19px -35px;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -113,8 +119,8 @@ ul#slider2 li { height: 350px; }
 	top: 45%;
 	margin-top: -16px;
 	outline: 0;
-	width: 10px;
-	height: 19px;
+	width: 19px;
+	height: 35px;
 	text-indent: -9999px;
 	z-index: 8000;
 }

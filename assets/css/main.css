@@ -150,6 +150,11 @@ strong { font-weight: 700; }
 		-ms-transition: all .3s ease;
 	}
 	.info a:hover {	background: rgba(242, 151, 0, 1); }
+
+
+/* ==========================================================================
+   Content Styles
+   ========================================================================== */
 	
 .white-content { background: white; padding: 50px 0; }
 h1 { font-weight: 300; color: rgb(242, 151, 0); margin-bottom: 27px; font-size: 22px; }
@@ -158,6 +163,19 @@ h4 { font-weight: 300; font-size: 17px; }
 h5 { font-weight: 300; font-size: 16px; }
 
 .left { width: 550px; padding: 0px 50px; float: left; }
+ul.bread-nav { margin-top: -18px; font-size: 13px!important; }
+.bread-nav li {	display: inline-block; line-height: 16px; background: none!important; padding-left: 0!important; }
+	.bread-nav li:after {
+		font-family: 'Ionicons';
+		content: "\f154";
+		font-size: 14px;
+		vertical-align: middle;
+		padding: 0px 3px 0px 6px;
+		color: rgba(85, 85, 85, .6);
+	}
+	.bread-nav li:last-child:after { content: " "; }
+	.bread-nav li a { text-decoration: none; color: rgba(85, 85, 85, .6); }
+	.bread-nav li a:hover { text-decoration: underline; }
 .left p {
 	text-align: justify;
 	line-height: 24px;
@@ -182,7 +200,8 @@ h5 { font-weight: 300; font-size: 16px; }
 }
 .gallery img:nth-child(3n+3) {margin-right: 0;}
 
-.quick-menu, .quick-contact { width: 260px; padding-left: 50px; float: right; }
+.right { float: right; }
+.quick-menu, .quick-contact { width: 260px; padding-left: 50px; }
 .quick-menu ul li {
 	background: rgba(85, 85, 85, .2);
 	margin-bottom: 10px;
@@ -204,7 +223,8 @@ h5 { font-weight: 300; font-size: 16px; }
 .quick-menu li:last-child { margin-bottom: 0; }
 	.quick-menu li a { color: rgb(85, 85, 85); text-decoration: none; display: block; line-height: 42px;}
 	.quick-menu li a:hover { color: white; }
-	.quick-menu li:hover { background: rgb(85, 85, 85); }
+	.quick-menu li:hover { background: rgb(85, 85, 85); } .quick-menu li:hover a { color: white; }
+	.quick-menu li.active { background: rgb(85, 85, 85); } .quick-menu li.active a { color: white; }
 
 .margined { margin-top: 35px; }
 .quick-contact .address { font-size: 15px; line-height: 20px; }
@@ -269,6 +289,7 @@ li.img-wrap {
 	color: white;
 	text-align: center;
 }
+	.service-form.slim { height: 100px; }
 	.service-form h1 { font-size: 35px; color: white!important; margin-bottom: 15px!important; }
 	.service-form span { font-size: 17px; display: block; margin-bottom: 35px; }
 	.service-form a {
@@ -293,7 +314,24 @@ li.img-wrap {
 		-ms-transition: all .3s ease;
 	}
 	.service-form a:hover { background: rgba(102, 168, 54, 1); }
+
+article {
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(102, 102, 102, 0.1);
+	clear: both;
+}
+article:first-of-type { padding-top: 0!important; }
+article:last-of-type { border-bottom: none!important; padding-bottom: 0!important; }
+	article img { float:left; padding: 0px 15px 10px 0px; }
+	article h1 a, article h1 { font-size: 19px; margin-bottom: 8px!important; text-decoration: none; color: rgb(242, 151, 0); }
+		article h1 a:hover { text-decoration: underline; }
+	article .date { font-size: 13px; font-weight: 400; margin-bottom: 3px; display: inline-block; }
+	article p { margin-bottom: 0!important; }
 	
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */	
 footer {
 	background: white;
 	font-size: 28px;
@@ -313,3 +351,39 @@ footer {
 	display: block;
 	margin: 20px 0 20px 0;
 }
+
+/* ==========================================================================
+   LogedIn Styles
+   ========================================================================== */
+table.user-info, table.user-history { width: 100%; }
+	.user-info tr, .user-history tr { border-bottom: 1px solid rgba(85, 85, 85, 0.1); }
+	.user-info tr:last-child, .user-history tr:last-child { border: none; }
+	.user-info tr td, .user-history tr td { padding: 8px; }
+	.user-info td:nth-child(2n+1) { font-weight: 400; }
+.user-history thead { text-align: left; }
+	.user-history thead th { font-weight: 600; padding: 6px; color: white; background: rgba(85, 85, 85, .5); }
+	
+/* ==========================================================================
+   Reservation Table + Inputs Styles
+   ========================================================================== */
+.full {
+	padding: 0px 50px;
+}
+
+.order { width: 100%; text-align: center; }
+.order td, .order th { padding: 7px 0px; }
+.order th:nth-child(1), .order td:nth-child(1), .order th:nth-child(7), .order td:nth-child(7) { width: 5%; }
+.order th:nth-child(2),.order th:nth-child(3),.order th:nth-child(4),.order th:nth-child(5),.order th:nth-child(6),
+.order td:nth-child(2),.order td:nth-child(3),.order td:nth-child(4),.order td:nth-child(5),.order td:nth-child(6) { width: 18%; }
+.order tr:nth-child(2n+1) { border-bottom: 1px solid rgba(85, 85, 85, 0.2); } .order td { border-right: 1px solid rgba(85, 85, 85, 0.2); } .order td:last-child { border: none!important; }
+.order tr:nth-child(2n+2) { border-bottom: 1px solid rgba(85, 85, 85, 0.1); }
+	.order tr:hover, .order td:hover { background: rgba(85, 85, 85, 0.1); }
+	.order td:nth-child(1):hover { background: none!important; } .order tr:nth-child(1) { background: none!important; border: none!important; }
+	.order td:nth-child(7):hover { background: none!important; }
+.order th { background: rgba(85, 85, 85, 0.5); color: white; font-weight: 400; }
+	.order th:nth-child(1) { border-radius: 3px 0 0 0; -webkit-border-radius: 3px 0 0 0; -moz-border-radius: 3px 0 0 0; -o-border-radius: 3px 0 0 0; -ms-border-radius: 3px 0 0 0; }
+	.order th:nth-child(7) { border-radius: 0 3px 0 0; -webkit-border-radius: 0 3px 0 0; -moz-border-radius: 0 3px 0 0; -o-border-radius: 0 3px 0 0; -ms-border-radius: 0 3px 0 0; }
+
+.order td.busy { background: rgba(242, 151, 0, 1); color: white; font-weight: 300; }
+.order td.disable { background: rgba(85, 85, 85, 0.4); color: white; cursor: not-allowed; } order td.disable:hover { background: none!important; }
+
