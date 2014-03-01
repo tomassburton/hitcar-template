@@ -1,10 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin-ext);
 @import url('ionicons.css');
-html,
-button,
-input,
-select,
-textarea {
+html {
     color: #555555;
     background: black;	
 }
@@ -152,11 +148,16 @@ strong { font-weight: 700; }
 	.info a:hover {	background: rgba(242, 151, 0, 1); }
 
 
-/* ==========================================================================
+/* ======================================	====================================
    Content Styles
    ========================================================================== */
 	
-.white-content { background: white; padding: 50px 0; }
+.white-content { background: white; padding: 50px 0; 	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+}
 h1 { font-weight: 300; color: rgb(242, 151, 0); margin-bottom: 27px; font-size: 22px; }
 h3 { font-weight: 300; font-size: 18px; }
 h4 { font-weight: 300; font-size: 17px; }
@@ -181,16 +182,20 @@ ul.bread-nav { margin-top: -18px; font-size: 13px!important; }
 	line-height: 24px;
 	margin-bottom: 15px;
 }
-	.left p a { text-decoration: underline; color: rgb(85, 85, 85); }
-	.left p a:hover { color: rgb(242, 151, 0); }
+	.left a { text-decoration: underline; color: rgb(85, 85, 85); }
+	.left a:hover { color: rgb(242, 151, 0); }
 .white-content ul li {
 	background: url(../img/li-before.svg) 0 6px no-repeat;
 	padding-left: 15px;
 	margin-bottom: 10px;
 }
-.article ul { margin-bottom: 15px; }
+.article ul, .services ul { margin-bottom: 15px; display: table; }
 .article > img { float: left; display: block; padding: 0px 15px 15px 0px; }
 .article > .date { font-weight: 700; display: inline-block; margin-bottom: 5px; }
+
+.services h3 { color: rgb(242, 151, 0)!important; margin-bottom: 10px; }
+.services > img { float: left; display: block; padding: 0px 15px 15px 0px; }
+.services > img.right { float: right; display: block; padding: 0px 0px 15px 15px; }
 
 .gallery {margin-top: 10px;}
 .gallery img {
@@ -200,7 +205,7 @@ ul.bread-nav { margin-top: -18px; font-size: 13px!important; }
 }
 .gallery img:nth-child(3n+3) {margin-right: 0;}
 
-.right { float: right; }
+.right { float: right; } .float-left { float: left; }
 .quick-menu, .quick-contact { width: 260px; padding-left: 50px; }
 .quick-menu ul li {
 	background: rgba(85, 85, 85, .2);
@@ -290,6 +295,8 @@ li.img-wrap {
 	text-align: center;
 }
 	.service-form.slim { height: 100px; }
+	.service-form.slim2x { height: 35px; }
+	.slim i { font-size: 30px; margin-bottom: 10px;}
 	.service-form h1 { font-size: 35px; color: white!important; margin-bottom: 15px!important; }
 	.service-form span { font-size: 17px; display: block; margin-bottom: 35px; }
 	.service-form a {
@@ -370,7 +377,7 @@ table.user-info, table.user-history { width: 100%; }
 	padding: 0px 50px;
 }
 
-.order { width: 100%; text-align: center; }
+/*.order { width: 100%; text-align: center; }
 .order td, .order th { padding: 7px 0px; }
 .order th:nth-child(1), .order td:nth-child(1), .order th:nth-child(7), .order td:nth-child(7) { width: 5%; }
 .order th:nth-child(2),.order th:nth-child(3),.order th:nth-child(4),.order th:nth-child(5),.order th:nth-child(6),
@@ -384,6 +391,188 @@ table.user-info, table.user-history { width: 100%; }
 	.order th:nth-child(1) { border-radius: 3px 0 0 0; -webkit-border-radius: 3px 0 0 0; -moz-border-radius: 3px 0 0 0; -o-border-radius: 3px 0 0 0; -ms-border-radius: 3px 0 0 0; }
 	.order th:nth-child(7) { border-radius: 0 3px 0 0; -webkit-border-radius: 0 3px 0 0; -moz-border-radius: 0 3px 0 0; -o-border-radius: 0 3px 0 0; -ms-border-radius: 0 3px 0 0; }
 
-.order td.busy { background: rgba(242, 151, 0, 1); color: white; font-weight: 300; }
+.order td.busy { background: rgba(242, 151, 0, 1); color: white; font-weight: 300; font-size: 13px; }
 .order td.disable { background: rgba(85, 85, 85, 0.4); color: white; cursor: not-allowed; } order td.disable:hover { background: none!important; }
 
+/* ==========================================================================
+   Checkboxes and Steps Styles
+   ========================================================================== */
+.fifty {
+	display: inline-block !important;
+	vertical-align: top !important;
+	float: none !important;
+	height: auto !important;
+	zoom: 1;
+	overflow: hidden;
+	width: 398px;	
+}
+	.fifty:nth-child(2n+2) { padding-left: 30px }
+.fifty h2 { font-weight: 300; margin-bottom: 10px; color: rgb(242, 151, 0); }
+	.fifty:nth-child(2n+3) h2 { margin-top: 20px!important; }
+.fifty label { display: block; cursor: pointer; margin-bottom: 13px; margin-left: 10px; line-height: 15px; }
+
+	.has-js .label_check,
+	.has-js .label_radio { padding-left: 20px; }
+	
+	.has-js .label_check { background: url(../img/check-off.png) no-repeat; }
+	.has-js .label_check:hover { background: url(../img/check-hover.png) no-repeat; }
+	.has-js label.c_on { background: url(../img/check-on.png) no-repeat; }
+	.has-js label.c_on:hover { background: url(../img/check-on.png) no-repeat; }
+	
+	.has-js .label_check input,
+	.has-js .label_radio input { position: absolute; left: -9999px; }
+	
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) {
+	.has-js .label_check { background: url(../img/check-off2x.png) no-repeat; background-size: 15px 15px; }
+	.has-js .label_check:hover { background: url(../img/check-hover2x.png) no-repeat; background-size: 15px 15px; }
+	.has-js label.c_on { background: url(../img/check-on2x.png) no-repeat; background-size: 15px 15px; }
+	.has-js label.c_on:hover { background: url(../img/check-on2x.png) no-repeat; background-size: 15px 15px; }
+}
+
+/* ==========================================================================
+   Tabs Styles
+   ========================================================================== */
+.tabs {
+	list-style-type: none;
+	display: table;
+	padding: 0!important;
+	width: 100%;
+	}
+.tabs li {
+	display: table-cell;
+	text-align: center;
+	width: auto;
+	float: none;
+	background: none!important;
+	padding: 0!important;
+	line-height: 22px!important;
+}
+.tabs li a {
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: 300;
+	color: rgba(85, 85, 85, .5);
+	
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+}
+	.tabs li a:hover { color: rgb(85, 85, 85); }
+	.tabs li a.active { color: rgb(242, 151, 0); }
+	
+label > i { padding-left: 5px; color: rgb(153, 0, 0); font-size: 11px;}
+#login .fifty i { text-align: center; display: block; font-size: 60px; line-height: 110px; color: rgba(85, 85, 85, .4); }
+#login .fifty span { text-align: center; display: block; margin-top: -25px; color: rgba(85, 85, 85, .4); }
+#login, #no-registration, #registration { padding-top: 40px; }	
+#login label, #no-registration label, #registration label {
+	cursor: default!important;
+	display: inline-block;
+	text-align: right;
+	display: inline-block;
+	vertical-align: middle;
+	width: 95px;
+	margin: 0 10px 0 0;
+	font-size: 14px;
+}
+
+#login input[type=submit], #registration input[type=submit] {
+	padding: .5em .6em;
+	background: rgba(85, 85, 85, .4);
+	border: 1px solid rgba(85, 85, 85, .4);
+	color: white;
+	font-size: 14px;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	box-shadow: none;
+	outline: 0;
+	width: 280px;
+	
+	border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+	
+	-webkit-transition: .2s linear all;
+	-moz-transition: .2s linear all;
+	-ms-transition: .2s linear all;
+	-o-transition: .2s linear all;
+	transition: .2s linear all;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+	#login input[type=submit]:hover, #registration input[type=submit]:hover {
+		background: rgb(242, 151, 0);
+		border: 1px solid rgb(242, 151, 0);
+		color: white;
+	}
+
+#login input[type=text],
+#login input[type=password],
+#login input[type=email],
+#no-registration input[type=text],
+#no-registration input[type=tel],
+#no-registration input[type=email],
+#no-registration input[type=number],
+#registration input[type=text],
+#registration input[type=email],
+#registration input[type=number],
+#registration input[type=password],
+#registration input[type=tel] {
+	padding: .5em .6em;
+	border: 1px solid rgba(85, 85, 85, .3);
+	font-size: 14px;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	color: rgb(85, 85, 85);
+	box-shadow: none;
+	outline: 0;
+	width: 280px;
+	margin-bottom: 8px;
+	
+	border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+	
+	-webkit-transition: .3s linear border;
+	-moz-transition: .3s linear border;
+	-ms-transition: .3s linear border;
+	-o-transition: .3s linear border;
+	transition: .3s linear border;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#login input[type=text]:focus,
+#login input[type=password]:focus,
+#login input[type=email]:focus,
+#no-registration input[type=text]:focus,
+#no-registration input[type=tel]:focus,
+#no-registration input[type=email]:focus,
+#no-registration input[type=number]:focus,
+#registration input[type=text]:focus,
+#registration input[type=email]:focus,
+#registration input[type=number]:focus,
+#registration input[type=password]:focus,
+#registration input[type=tel]:focus { outline:0;outline:thin dotted \9;border-color:rgba(102, 168, 54, 0.7); }
+
+span.require { text-align: center; font-size: 11px; margin-top: 15px; display: block; color: rgba(85, 85, 85, .6);}
+
+.order { margin-left: 10px; }
+.order li { background: none!important; padding-left: 0!important; }
+.order li span { width: 85px; display: inline-block; font-weight: 600; }

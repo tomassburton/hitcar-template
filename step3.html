@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>HIT-CAR Speed Servis</title>
+        <meta name="description" content="">
+
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/jquery.bxslider.css">
+        <link rel="stylesheet" href="assets/js/jquery-ui-1.10.4.custom.css">
+        
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+    	
+    	<div class="wrapper">
+	        <header class="container">
+	        	<div class="logo">
+	        		<span><strong>HIT-CAR</strong><br>Speed Servis</span>
+	        	</div>
+	        	
+	        	<div class="menu">
+	        		<ul>
+	        			<li><a class="active" href="">Úvod</a></li>
+	        			<li><a href="">O společnosti</a></li>
+	        			<li><a href="">Naše služby</a></li>
+	        			<li><a href="">Aktuality</a></li>
+	        			<li><a href="">Fotogalerie</a></li>
+	        			<li><a href="">Kontakty</a></li>
+	        		</ul>
+	        	</div>
+	        	
+	        	<div class="service-form slim">
+	        		<i class="ion-person"></i>
+	        		<h1>3. Vaše údaje</h1>
+	        	</div>
+	        </header>
+	        
+	        <section class="container">
+	        	<div class="white-content clearfix">
+	        		<div class="full">
+	        			<ul class="tabs">
+	        				<li><a class="active" href="#login">Přihlásit se</a></li>
+	        				<li><a href="#no-registration">Bez registrace</a></li>
+	        				<li><a href="#registration">Registrovat se</a></li>
+	        			</ul>
+	        			
+	        			<div id="login">
+	        				<div class="fifty">
+		        				<form name="login" action="" method="">
+		        					<label for="username">E-mail:</label>
+		        					<input type="email" name="username" placeholder="Vaše e-mailová adresa" required="">
+		        					<br>
+		        					<label for="password">Heslo:</label>
+		        					<input type="password" name="password" placeholder="Heslo" required="">	
+		        					<br>
+		        					<label></label>        	
+		        					<input type="submit" name="submit" value="Přihlásit">
+		        				</form>
+	        				</div>
+	        				
+	        				<div class="fifty">
+	        					<i class="ion-person-stalker"></i>
+	        					<span>Přihlaste se ke svému účtu</span>
+	        				</div>
+	        			</div>
+	        			
+	        			<div id="no-registration">
+	        				<div class="fifty">
+	        					<form name="no-registration" action="" method="">
+	        						<label for="name">Jméno:<i class="ion-flag"></i></label>
+	        						<input type="text" name="name" placeholder="Jméno" required="">
+	        						<label for="surname">Příjmení:<i class="ion-flag"></i></label>
+	        						<input type="text" name="surname" placeholder="Příjmení" required="">
+	        						<label for="phone">Telefon:<i class="ion-flag"></i></label>
+	        						<input type="tel" name="phone" value="+420" required="">
+	        						<label for="mail">E-mail:<i class="ion-flag"></i></label>
+	        						<input type="email" name="mail" value="@" required="">
+	        						<span class="require">Položky označené <i class="ion-flag"></i> jsou povinné.</span>
+	        				</div>
+	        				
+	        				<div class="fifty">
+	        						<label for="car">Vozidlo:</label>
+	        						<input type="text" name="car" placeholder="Značka" required="">
+	        						<label for="label">Model:</label>
+	        						<input type="text" name="label" placeholder="Model" required="">
+	        						<label for="year">Rok výroby:</label>
+	        						<input type="number" name="year" placeholder="Rok" required="">
+	        					</form>
+	        				</div>
+	        			</div>
+	        			
+	        			<div id="registration">
+	        				<div class="fifty">
+	        					<form name="no-registration" action="" method="">
+	        						<label for="name">Jméno:<i class="ion-flag"></i></label>
+	        						<input type="text" name="name" placeholder="Jméno" required="">
+	        						<label for="surname">Příjmení:<i class="ion-flag"></i></label>
+	        						<input type="text" name="surname" placeholder="Příjmení" required="">
+	        						<label for="phone">Telefon:<i class="ion-flag"></i></label>
+	        						<input type="tel" name="phone" value="+420" required="">
+	        						<label for="mail">E-mail:<i class="ion-flag"></i></label>
+	        						<input type="email" name="mail" value="@" required="">
+	        						<label for="pass">Heslo:<i class="ion-flag"></i></label>
+	        						<input type="password" name="pass" placeholder="Heslo" required="">
+	        						<label for="pass2">Znovu heslo:<i class="ion-flag"></i></label>
+	        						<input type="password" name="pass2" placeholder="Zopakujte heslo" required="">
+	        						<span class="require">Položky označené <i class="ion-flag"></i> jsou povinné.</span>
+	        				</div>
+	        				
+	        				<div class="fifty">
+	        						<label for="car">Vozidlo:</label>
+	        						<input type="text" name="car" placeholder="Značka" required="">
+	        						<label for="label">Model:</label>
+	        						<input type="text" name="label" placeholder="Model" required="">
+	        						<label for="year">Rok výroby:</label>
+	        						<input type="number" name="year" placeholder="Rok" required="">
+	        						<label></label>        	
+		        					<input type="submit" name="register" value="Registrovat se">
+	        					</form>
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        	
+	        	<div class="service-form slim2x">
+	        		<a href="" class="float-left" title="O krok zpět"><i class="ion-chevron-left"></i> <strong>Vrátit</strong> se zpět</a>
+	        		<a href="" class="right" title="Další krok"><strong>Pokračovat</strong> dále <i class="ion-chevron-right"></i></a>
+	        	</div>
+	        		        	
+	        	<div class="white-content clearfix">
+	        		<div class="left">
+	        			<h1>Naše přednosti</h1>
+	        			<ul>
+	        				<li>kvalitní technologická i technická vybavenost</li>
+	        				<li>komplexní vybavení</li>
+	        				<li>moderní diagnostické přístroje</li>
+	        				<li>precizní a kvalitní práce</li>
+	        				<li>spolehlivost, a to zejména v oblasti dodržování termínů</li>
+	        				<li>snižování nákladů na údržbu firemních autoparků našich zákazníků</li>
+	        			</ul>
+	        		</div>
+	        		
+	        		<div class="right">
+		        		<div class="quick-contact">
+		        			<h1>Rychlý kontakt</h1>
+		        			<span class="address">
+		        				<strong>HIT-CAR Speed Servis</strong>
+		        				Průběžná 90<br>
+		        				100 00, Praha 10
+		        			</span>
+		        			<ul class="contact">
+		        				<li><i class="ion-ios7-telephone"></i> +420 602 966 772</li>
+		        				<li><i class="ion-email"></i> <a href="mailto:info@hitcar.cz">info@hitcar.cz</a></li>
+		        				<li><i class="ion-navigate"></i> <a href="http://goo.gl/maps/zCISc" target="_blank">50° 3' 48.22", 14° 30' 14.21"</a></li>
+		        			</ul>
+		        		</div>
+	        		</div>
+	        	</div>
+	        		        	
+	        	<footer>
+		        	<span>Rychlý kontakt k nám <strong>+420 602 966 722</strong></span>
+		        </footer>
+		        
+		        <span class="copyright">
+		        	2014 © Lukáš Vála HIT-CAR<br>
+		        	Created by Tomáš Náhlovský &amp; Tomáš Kazatel
+		        </span>
+	        </section>
+	        
+    	</div>
+    
+    <script src="assets/js/modernizr-hitcar.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="assets/js/jquery.bxslider.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

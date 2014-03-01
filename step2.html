@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>HIT-CAR Speed Servis</title>
+        <meta name="description" content="">
+
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/jquery.bxslider.css">
+        <link rel="stylesheet" href="assets/js/jquery-ui-1.10.4.custom.css">
+        
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+    	
+    	<div class="wrapper">
+	        <header class="container">
+	        	<div class="logo">
+	        		<span><strong>HIT-CAR</strong><br>Speed Servis</span>
+	        	</div>
+	        	
+	        	<div class="menu">
+	        		<ul>
+	        			<li><a class="active" href="">Úvod</a></li>
+	        			<li><a href="">O společnosti</a></li>
+	        			<li><a href="">Naše služby</a></li>
+	        			<li><a href="">Aktuality</a></li>
+	        			<li><a href="">Fotogalerie</a></li>
+	        			<li><a href="">Kontakty</a></li>
+	        		</ul>
+	        	</div>
+	        	
+	        	<div class="service-form slim">
+	        		<i class="ion-clock"></i>
+	        		<h1>2. Výběr data a času</h1>
+	        	</div>
+	        </header>
+	        
+	        <section class="container">
+	        	<div class="white-content clearfix">
+	        		<div class="full">
+	        			<div class="fifty">
+		        			<h2><i class="ion-ios7-calendar-outline"></i> Datum <input type="text" id="alternate"></h2>
+		        			<div id="datepicker"></div>
+	        			</div>
+	        			<div class="fifty">
+		        			<h2><i class="ion-ios7-time-outline"></i> Čas</h2>
+		        			<select name="time" id="time">
+		        				<option>8:00</option>
+		        				<option>8:30</option>
+		        				<option>9:00</option>
+		        				<option>9:30</option>
+		        				<option>10:00</option>
+		        				<option>10:30</option>
+		        				<option>11:00</option>
+		        				<option>11:30</option>
+		        				<option>12:00</option>
+		        				<option>12:30</option>
+		        				<option>13:00</option>
+		        			</select>
+	        			</div>
+	        		</div>
+	        	</div>
+	        	
+	        	<div class="service-form slim2x">
+	        		<a href="" class="float-left" title="O krok zpět"><i class="ion-chevron-left"></i> <strong>Vrátit</strong> se zpět</a>
+	        		<a href="" class="right" title="Další krok"><strong>Pokračovat</strong> dále <i class="ion-chevron-right"></i></a>
+	        	</div>
+	        		        	
+	        	<div class="white-content clearfix">
+	        		<div class="left">
+	        			<h1>Naše přednosti</h1>
+	        			<ul>
+	        				<li>kvalitní technologická i technická vybavenost</li>
+	        				<li>komplexní vybavení</li>
+	        				<li>moderní diagnostické přístroje</li>
+	        				<li>precizní a kvalitní práce</li>
+	        				<li>spolehlivost, a to zejména v oblasti dodržování termínů</li>
+	        				<li>snižování nákladů na údržbu firemních autoparků našich zákazníků</li>
+	        			</ul>
+	        		</div>
+	        		
+	        		<div class="right">
+		        		<div class="quick-contact">
+		        			<h1>Rychlý kontakt</h1>
+		        			<span class="address">
+		        				<strong>HIT-CAR Speed Servis</strong>
+		        				Průběžná 90<br>
+		        				100 00, Praha 10
+		        			</span>
+		        			<ul class="contact">
+		        				<li><i class="ion-ios7-telephone"></i> +420 602 966 772</li>
+		        				<li><i class="ion-email"></i> <a href="mailto:info@hitcar.cz">info@hitcar.cz</a></li>
+		        				<li><i class="ion-navigate"></i> <a href="http://goo.gl/maps/zCISc" target="_blank">50° 3' 48.22", 14° 30' 14.21"</a></li>
+		        			</ul>
+		        		</div>
+	        		</div>
+	        	</div>
+	        		        	
+	        	<footer>
+		        	<span>Rychlý kontakt k nám <strong>+420 602 966 722</strong></span>
+		        </footer>
+		        
+		        <span class="copyright">
+		        	2014 © Lukáš Vála HIT-CAR<br>
+		        	Created by Tomáš Náhlovský &amp; Tomáš Kazatel
+		        </span>
+	        </section>
+	        
+    	</div>
+    
+    <script src="assets/js/modernizr-hitcar.js"></script>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/jquery-ui-1.10.4.custom.js"></script>
+    <script>
+	    var obsazeneDatum = ["3-3-2014","11-3-2014","12-3-2014","13-3-2014"];
+
+	    function obsazeno(date) {
+		    dmy = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear();
+		    if ($.inArray(dmy, obsazeneDatum) < 0) {
+			    return [true,"","Zde je volno"];
+			} else {
+				return [false,"","Nelze vybrat"];
+			}
+			
+		}
+		/*function week(date) {
+		    var day = date.getDay();
+		    return [day == 6 || day == 0 ? false : true];
+		}*/  
+		$(function() {
+			$( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M", inline: true, showOtherMonths: true, beforeShowDay: obsazeno, altField: "#alternate", altFormat: "DD, dd.mm.yy" });
+		});
+  </script>
+    </body>
+</html>
