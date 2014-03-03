@@ -299,7 +299,7 @@ li.img-wrap {
 	.slim i { font-size: 30px; margin-bottom: 10px;}
 	.service-form h1 { font-size: 35px; color: white!important; margin-bottom: 15px!important; }
 	.service-form span { font-size: 17px; display: block; margin-bottom: 35px; }
-	.service-form a {
+	.service-form a, .service-form input[type=submit] {
 		background: rgba(102, 168, 54, .7);
 		font-size: 14px;
 		color: white;
@@ -307,6 +307,9 @@ li.img-wrap {
 		line-height: 42px;
 		display: inline-block;
 		padding: 0px 12px;
+		border:none;
+		font-weight: 300;
+		font-family: 'Open Sans';
 		
 		border-radius: 3px 3px 3px 3px;
 		-webkit-border-radius: 3px 3px 3px 3px;
@@ -320,7 +323,7 @@ li.img-wrap {
 		-o-transition: all .3s ease;
 		-ms-transition: all .3s ease;
 	}
-	.service-form a:hover { background: rgba(102, 168, 54, 1); }
+	.service-form a:hover, .service-form input[type=submit]:hover { background: rgba(102, 168, 54, 1); }
 
 article {
 	padding: 20px 0px;
@@ -408,7 +411,7 @@ table.user-info, table.user-history { width: 100%; }
 }
 	.fifty:nth-child(2n+2) { padding-left: 30px }
 .fifty h2 { font-weight: 300; margin-bottom: 10px; color: rgb(242, 151, 0); }
-	.fifty:nth-child(2n+3) h2 { margin-top: 20px!important; }
+	.fifty:nth-child(2n+3) h2 { margin-top: 0px!important; }
 .fifty label { display: block; cursor: pointer; margin-bottom: 13px; margin-left: 10px; line-height: 15px; }
 
 	.has-js .label_check,
