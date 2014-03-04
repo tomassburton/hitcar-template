@@ -295,7 +295,7 @@ li.img-wrap {
 	text-align: center;
 }
 	.service-form.slim { height: 100px; }
-	.service-form.slim2x { height: 35px; }
+	.service-form.slim2x { height: 35px; background: url(../img/service-form-bg2.jpg) 0 -40px no-repeat; }
 	.slim i { font-size: 30px; margin-bottom: 10px;}
 	.service-form h1 { font-size: 35px; color: white!important; margin-bottom: 15px!important; }
 	.service-form span { font-size: 17px; display: block; margin-bottom: 35px; }
